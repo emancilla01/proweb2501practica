@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muebles Eco</title>
+</head>
+<body onload="ver('https://practica1.test/inicio.html')">
+    <div>
+        <h1>Bienvenidos a Muebles Eco</h1>
+    </div>
+    <div>
+        <ul>
+            <li><button onclick="ver('https://practica1.test/exteriores/exteriores.html')">Muebles Exteriores</button></li>
+            <li><button onclick="ver('https://practica1.test/interiores/interiores.html')">Muebles Interiores</button></li>
+            <li><button onclick="ver('https://practica1.test/lineablanca/lineablanca.html')">Muebles Linea Blanca</button></li>
+
+        </ul>
+    </div>
+    <div id="cont1">
+        
+    </div>
+    <div>
+        <a href="https://listado.mercadolibre.com.mx/hogar-muebles-jardin/muebles-hogar/" target="_blank">Mercado Libre</a>
+        <a href="https://houzerstore.com.mx/" target="_blank">Houzer</a>
+        <a href="https://www.ikea.com/mx/es/?utm_campaign=MX_HMMX_IKEA_IKEA_E-Commerce-Suppot_EneDic_ECOM&utm_source=Google&utm_medium=Text_Text_CPC&utm_content=PR_DE_BROAD-AUDIENCE_OneKeyword_1&utm_term=1x1__OneKeyword_1&gad_source=1&gclid=Cj0KCQiAq-u9BhCjARIsANLj-s3tGWQnlfsPrqHZKRgyBhrodsk0CKbY1nkpVZAms1SJYmCAk7hcjwkaAhPEEALw_wcB" target="_blank">Ikea</a>
+    </div>
+</body>
+<script>
+    function ver(url) {
+        div1 = document.querySelector("#cont1");
+        fetch (url)
+            .then (response => response.text())
+            .then (data => {div1.innerHTML = data });
+    }
+</script>
+</html>
